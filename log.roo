@@ -1,0 +1,35 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-12 18:01:28
+hint
+project --topLevelPackage com.petStatistic --projectName petStatistic
+hint
+persistence setup --database MYSQL --provider HIBERNATE 
+hint
+entity jpa --class ~.domain.Device --testAutomatically 
+field string --fieldName channel --class ~.domain.Device
+field string --fieldName mac --class ~.domain.Device
+field string --fieldName imei --class ~.domain.Device
+hint
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-13 09:15:37
+hint
+hint entities
+entity jpa --class ~.domain.HistoryLog --testAutomatically 
+field string --fieldName userId --class ~.domain.HistoryLog
+field string --fieldName connectTimes --class ~.domain.HistoryLog
+finder list
+entity jpa --class ~.domain.UsageState --testAutomatically 
+field string --fieldName userId --class ~.domain.UsageState
+entity jpa --class ~.domain.Admin --testAutomatically 
+field string --fieldName userName --class ~.domain.Admin
+field string --fieldName password --class ~.domain.Admin
+finder list
+find add findAdminsByPasswordEquals
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-13 10:06:22
+hint
+controller all --package ~.controller
+logging setup --level INFO --package ALL_SPRING 
+q
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-08-13 10:08:16
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-13 10:12:27
+hint
+q
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-08-13 10:38:17

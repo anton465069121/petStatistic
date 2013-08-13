@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_usagestate" z="+d9CXq6XkaoIrL6pYjCcYx7t/gI=">
+            <menu:item id="i_usagestate_new" messageCode="global_menu_new" url="/usagestates?form" z="c41R05oLe/aDbRWpazCVSGYvh5k="/>
+            <menu:item id="i_usagestate_list" messageCode="global_menu_list" url="/usagestates?page=1&amp;size=${empty param.size ? 10 : param.size}" z="LcdaszRQIEx11173oFqG6iXs8MI="/>
+        </menu:category>
+        <menu:category id="c_device" z="MSnwuh/8KSgMC7e3d68F+WCXnxQ=">
+            <menu:item id="i_device_new" messageCode="global_menu_new" url="/devices?form" z="J2ebcm2NAeVzA9aPlvjk8cZGsGA="/>
+            <menu:item id="i_device_list" messageCode="global_menu_list" url="/devices?page=1&amp;size=${empty param.size ? 10 : param.size}" z="xa/7Yt+ZiiZtoWCjHAIwn3jtlsk="/>
+        </menu:category>
+        <menu:category id="c_admin" z="yJekxb7XuSQP9KBD9S6wbwLaHZY=">
+            <menu:item id="i_admin_new" messageCode="global_menu_new" url="/admins?form" z="TPmBX+1lfAP8gYU/pX/jcYwsTfM="/>
+            <menu:item id="i_admin_list" messageCode="global_menu_list" url="/admins?page=1&amp;size=${empty param.size ? 10 : param.size}" z="JRwUq6a+WGX2NnSSZCd4lcreuMk="/>
+        </menu:category>
+        <menu:category id="c_historylog" z="+7UXeRo/TQHhMRc6DckwUi1ldSQ=">
+            <menu:item id="i_historylog_new" messageCode="global_menu_new" url="/historylogs?form" z="pQ9+boRZyvBGfCR1z6g7tTyGE6s="/>
+            <menu:item id="i_historylog_list" messageCode="global_menu_list" url="/historylogs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lV8v+uwPRgZwhmXXDUcCzG+feJk="/>
+        </menu:category>
+    </menu:menu>
+</div>

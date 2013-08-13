@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_petstatistic_domain_HistoryLog" items="${historylogs}" z="jgStpgPd/rcxoIIZ5AGIq54XOeM=">
+        <table:table data="${historylogs}" id="l_com_petstatistic_domain_HistoryLog" path="/historylogs" z="xXZG103hGR6AVs1g9DutbMfV2gY=">
+            <table:column id="c_com_petstatistic_domain_HistoryLog_userId" property="userId" z="vy5AJgaRh5HO4wNMJ5Qq0ZmaeIs="/>
+            <table:column id="c_com_petstatistic_domain_HistoryLog_connectTimes" property="connectTimes" z="KfTMVqywfW24+3l5gwt+p/VfRKg="/>
+        </table:table>
+    </page:list>
+</div>

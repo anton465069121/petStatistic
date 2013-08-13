@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_petstatistic_domain_Device" modelAttribute="device" path="/devices" versionField="Version" z="l0RgnN9crUYHHifzlEN8hr0JeJE=">
+        <field:input field="channel" id="c_com_petstatistic_domain_Device_channel" z="7R5Pv7enRsXpjt7EiMPELwSdJDs="/>
+        <field:input field="mac" id="c_com_petstatistic_domain_Device_mac" z="nudlgPbzOGVAArmVNIi85cVUgZA="/>
+        <field:input field="imei" id="c_com_petstatistic_domain_Device_imei" z="JMHaz26TxpzypHKAttAGe9bUJTc="/>
+    </form:update>
+</div>
