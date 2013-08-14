@@ -38,3 +38,13 @@ hint
 hint
 q
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-08-13 11:30:20
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-13 14:12:24
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-14 10:45:47
+hint
+hint web mvc
+hint
+web mvc controller --class ~.controller.PetStatisticController
+hint
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-14 11:32:20
+hint
+web mvc view --path ~.petstatistic --viewName test --title test
