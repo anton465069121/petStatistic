@@ -4,14 +4,23 @@
 package com.petstatistic.domain;
 
 import com.petstatistic.domain.UsageState;
+import java.sql.Date;
 
 privileged aspect UsageState_Roo_JavaBean {
     
-    public String UsageState.getUserId() {
+    public Date UsageState.getLastConnectTime() {
+        return this.lastConnectTime;
+    }
+    
+    public void UsageState.setLastConnectTime(Date lastConnectTime) {
+        this.lastConnectTime = lastConnectTime;
+    }
+    
+    public long UsageState.getUserId() {
         return this.userId;
     }
     
-    public void UsageState.setUserId(String userId) {
+    public void UsageState.setUserId(long userId) {
         this.userId = userId;
     }
     

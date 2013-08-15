@@ -6,6 +6,7 @@ package com.petstatistic.domain;
 import com.petstatistic.domain.UsageState;
 import com.petstatistic.domain.UsageStateDataOnDemand;
 import java.security.SecureRandom;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -24,12 +25,18 @@ privileged aspect UsageStateDataOnDemand_Roo_DataOnDemand {
     
     public UsageState UsageStateDataOnDemand.getNewTransientUsageState(int index) {
         UsageState obj = new UsageState();
+        setLastConnectTime(obj, index);
         setUserId(obj, index);
         return obj;
     }
     
+    public void UsageStateDataOnDemand.setLastConnectTime(UsageState obj, int index) {
+        Date lastConnectTime = null;
+        obj.setLastConnectTime(lastConnectTime);
+    }
+    
     public void UsageStateDataOnDemand.setUserId(UsageState obj, int index) {
-        String userId = "userId_" + index;
+        Long userId = new Integer(index).longValue();
         obj.setUserId(userId);
     }
     

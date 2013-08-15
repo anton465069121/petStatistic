@@ -4,16 +4,9 @@
 package com.petstatistic.domain;
 
 import com.petstatistic.domain.Device;
+import java.sql.Date;
 
 privileged aspect Device_Roo_JavaBean {
-    
-    public String Device.getChannel() {
-        return this.channel;
-    }
-    
-    public void Device.setChannel(String channel) {
-        this.channel = channel;
-    }
     
     public String Device.getMac() {
         return this.mac;
@@ -29,6 +22,30 @@ privileged aspect Device_Roo_JavaBean {
     
     public void Device.setImei(String imei) {
         this.imei = imei;
+    }
+    
+    public Date Device.getCreateTime() {
+        return this.createTime;
+    }
+    
+    public void Device.setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+    
+    public String Device.getChannel() {
+        return this.channel;
+    }
+    
+    public void Device.setChannel(String channel) {
+        this.channel = channel;
+    }
+    
+    public long Device.getUserid() {
+        return this.userid;
+    }
+    
+    public void Device.setUserid(long userid) {
+        this.userid = userid;
     }
     
 }

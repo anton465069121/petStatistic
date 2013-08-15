@@ -6,6 +6,8 @@
         <field:input field="channel" id="c_com_petstatistic_domain_Device_channel" z="7R5Pv7enRsXpjt7EiMPELwSdJDs="/>
         <field:input field="mac" id="c_com_petstatistic_domain_Device_mac" z="nudlgPbzOGVAArmVNIi85cVUgZA="/>
         <field:input field="imei" id="c_com_petstatistic_domain_Device_imei" z="JMHaz26TxpzypHKAttAGe9bUJTc="/>
+        <field:input field="createTime" id="c_com_petstatistic_domain_Device_createTime" z="4D16QRaRHLwbqPAAFqMavai19BA="/>
+        <field:input field="userid" id="c_com_petstatistic_domain_Device_userid" z="UA0ykfiYoT52YwR/zp52j2lYxaY="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_petstatistic_domain_Device" render="${not empty dependencies}" z="LAAJbQm1wPUZeEECO7lM42gUdho="/>
 </div>

@@ -19,5 +19,8 @@
             <menu:item id="i_historylog_new" messageCode="global_menu_new" url="/historylogs?form" z="pQ9+boRZyvBGfCR1z6g7tTyGE6s="/>
             <menu:item id="i_historylog_list" messageCode="global_menu_list" url="/historylogs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lV8v+uwPRgZwhmXXDUcCzG+feJk="/>
         </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__petstatisticindex_id" messageCode="global_generic" url="/petstatistic/index" z="xcchW1EJLQjR1DcoEPn5QmokfvM="/>
+        </menu:category>
     </menu:menu>
 </div>

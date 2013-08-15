@@ -6,6 +6,7 @@ package com.petstatistic.domain;
 import com.petstatistic.domain.HistoryLog;
 import com.petstatistic.domain.HistoryLogDataOnDemand;
 import java.security.SecureRandom;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -25,17 +26,23 @@ privileged aspect HistoryLogDataOnDemand_Roo_DataOnDemand {
     public HistoryLog HistoryLogDataOnDemand.getNewTransientHistoryLog(int index) {
         HistoryLog obj = new HistoryLog();
         setConnectTimes(obj, index);
+        setHistoryDate(obj, index);
         setUserId(obj, index);
         return obj;
     }
     
     public void HistoryLogDataOnDemand.setConnectTimes(HistoryLog obj, int index) {
-        String connectTimes = "connectTimes_" + index;
+        Long connectTimes = new Integer(index).longValue();
         obj.setConnectTimes(connectTimes);
     }
     
+    public void HistoryLogDataOnDemand.setHistoryDate(HistoryLog obj, int index) {
+        Date historyDate = null;
+        obj.setHistoryDate(historyDate);
+    }
+    
     public void HistoryLogDataOnDemand.setUserId(HistoryLog obj, int index) {
-        String userId = "userId_" + index;
+        Long userId = new Integer(index).longValue();
         obj.setUserId(userId);
     }
     

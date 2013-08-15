@@ -7,6 +7,8 @@
             <table:column id="c_com_petstatistic_domain_Device_channel" property="channel" z="7hkKddZ4313qwz55cUmuygH/FY0="/>
             <table:column id="c_com_petstatistic_domain_Device_mac" property="mac" z="Rifn+2I7EKhDZVNQ7OMETj4Ky9g="/>
             <table:column id="c_com_petstatistic_domain_Device_imei" property="imei" z="pgwSux6Npqhvi/7fJ5sYfR1kzF0="/>
+            <table:column id="c_com_petstatistic_domain_Device_createTime" property="createTime" z="Dj/ORioAAEwh98z8hLaHO9k2pD4="/>
+            <table:column id="c_com_petstatistic_domain_Device_userid" property="userid" z="OsrUyOL5EF7KCpp8J1P1f2vfQO4="/>
         </table:table>
     </page:list>
 </div>

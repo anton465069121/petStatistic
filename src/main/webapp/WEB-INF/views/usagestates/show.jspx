@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_petstatistic_domain_UsageState" object="${usagestate}" path="/usagestates" z="jMrp8mZbdI/c05+L/Vd3MDOxmnY=">
         <field:display field="userId" id="s_com_petstatistic_domain_UsageState_userId" object="${usagestate}" z="kw8DFbB0EG5Lr7ZcaFT1ZzqWGRk="/>
+        <field:display field="lastConnectTime" id="s_com_petstatistic_domain_UsageState_lastConnectTime" object="${usagestate}" z="INnCiAKbyKTwOejktQyUd6KadPo="/>
     </page:show>
 </div>

@@ -48,3 +48,11 @@ hint
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-14 11:32:20
 hint
 web mvc view --path ~.petstatistic --viewName test --title test
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-14 11:45:21
+hint
+web mvc controller --class ~.controller.PetStatisticController
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-15 14:33:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-08-15 15:15:29
+hint
+hint
+entity jpa --class ~.vo.OverView

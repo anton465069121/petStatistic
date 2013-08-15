@@ -4,6 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_petstatistic_domain_UsageState" modelAttribute="usageState" path="/usagestates" render="${empty dependencies}" z="mHV+rv4+vYf3CRLN3wKbz982gyw=">
         <field:input field="userId" id="c_com_petstatistic_domain_UsageState_userId" z="4EMsdtGreoDcJwsfeqURQa2A+mY="/>
+        <field:input field="lastConnectTime" id="c_com_petstatistic_domain_UsageState_lastConnectTime" z="pkutKcT94U83lvPVEkldo5B2sQQ="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_petstatistic_domain_UsageState" render="${not empty dependencies}" z="/VT9bRZliTMdZVAL5x0BWEvsd/w="/>
 </div>

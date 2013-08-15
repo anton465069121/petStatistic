@@ -6,6 +6,7 @@ package com.petstatistic.domain;
 import com.petstatistic.domain.Device;
 import com.petstatistic.domain.DeviceDataOnDemand;
 import java.security.SecureRandom;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -25,14 +26,21 @@ privileged aspect DeviceDataOnDemand_Roo_DataOnDemand {
     public Device DeviceDataOnDemand.getNewTransientDevice(int index) {
         Device obj = new Device();
         setChannel(obj, index);
+        setCreateTime(obj, index);
         setImei(obj, index);
         setMac(obj, index);
+        setUserid(obj, index);
         return obj;
     }
     
     public void DeviceDataOnDemand.setChannel(Device obj, int index) {
         String channel = "channel_" + index;
         obj.setChannel(channel);
+    }
+    
+    public void DeviceDataOnDemand.setCreateTime(Device obj, int index) {
+        Date createTime = null;
+        obj.setCreateTime(createTime);
     }
     
     public void DeviceDataOnDemand.setImei(Device obj, int index) {
@@ -43,6 +51,11 @@ privileged aspect DeviceDataOnDemand_Roo_DataOnDemand {
     public void DeviceDataOnDemand.setMac(Device obj, int index) {
         String mac = "mac_" + index;
         obj.setMac(mac);
+    }
+    
+    public void DeviceDataOnDemand.setUserid(Device obj, int index) {
+        Long userid = new Integer(index).longValue();
+        obj.setUserid(userid);
     }
     
     public Device DeviceDataOnDemand.getSpecificDevice(int index) {

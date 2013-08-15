@@ -5,6 +5,7 @@
     <form:create id="fc_com_petstatistic_domain_HistoryLog" modelAttribute="historyLog" path="/historylogs" render="${empty dependencies}" z="I/z6lLsp5ud0r7w8IYByh1RlJfs=">
         <field:input field="userId" id="c_com_petstatistic_domain_HistoryLog_userId" z="p8az6vXro9dt8upaO1jRY0/oMl4="/>
         <field:input field="connectTimes" id="c_com_petstatistic_domain_HistoryLog_connectTimes" z="QsrnbIfCYN8eaINipkg8lhK9Qk0="/>
+        <field:input field="historyDate" id="c_com_petstatistic_domain_HistoryLog_historyDate" z="gHISlDtsmlzy7/aUk/AT7i6CHew="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_petstatistic_domain_HistoryLog" render="${not empty dependencies}" z="wi2nagKV6dF8m93fz/h+pFVCrlE="/>
 </div>

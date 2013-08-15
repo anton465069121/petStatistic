@@ -1,15 +1,19 @@
 package com.petstatistic.domain;
 
+import java.sql.Date;
+
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
+import org.springframework.roo.addon.jpa.entity.RooJpaEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
+@RooJpaEntity
 @RooJpaActiveRecord
 public class HistoryLog {
-
-    private String userId;
-
-    private String connectTimes;
+	private long userId;
+	private Date historyDate;
+	private long connectTimes;
 }
+

@@ -5,5 +5,6 @@
     <page:show id="ps_com_petstatistic_domain_HistoryLog" object="${historylog}" path="/historylogs" z="1atvI3YHS2Zu5l85uLbPdPp/wjg=">
         <field:display field="userId" id="s_com_petstatistic_domain_HistoryLog_userId" object="${historylog}" z="Po0l9N9vqFgO7kfjeO05eyur4/4="/>
         <field:display field="connectTimes" id="s_com_petstatistic_domain_HistoryLog_connectTimes" object="${historylog}" z="jSndUjPZsoIdO2/+SOsONeWdVjI="/>
+        <field:display field="historyDate" id="s_com_petstatistic_domain_HistoryLog_historyDate" object="${historylog}" z="J1rwjIzOD12b6HIlt+fCHf+hJss="/>
     </page:show>
 </div>

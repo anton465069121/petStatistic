@@ -43,7 +43,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Device, String> ApplicationConversionServiceFactoryBean.getDeviceToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.petstatistic.domain.Device, java.lang.String>() {
             public String convert(Device device) {
-                return new StringBuilder().append(device.getChannel()).append(' ').append(device.getMac()).append(' ').append(device.getImei()).toString();
+                return new StringBuilder().append(device.getMac()).append(' ').append(device.getImei()).append(' ').append(device.getCreateTime()).append(' ').append(device.getChannel()).toString();
             }
         };
     }
@@ -67,7 +67,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<HistoryLog, String> ApplicationConversionServiceFactoryBean.getHistoryLogToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.petstatistic.domain.HistoryLog, java.lang.String>() {
             public String convert(HistoryLog historyLog) {
-                return new StringBuilder().append(historyLog.getUserId()).append(' ').append(historyLog.getConnectTimes()).toString();
+                return new StringBuilder().append(historyLog.getUserId()).append(' ').append(historyLog.getHistoryDate()).append(' ').append(historyLog.getConnectTimes()).toString();
             }
         };
     }
@@ -91,7 +91,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<UsageState, String> ApplicationConversionServiceFactoryBean.getUsageStateToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.petstatistic.domain.UsageState, java.lang.String>() {
             public String convert(UsageState usageState) {
-                return new StringBuilder().append(usageState.getUserId()).toString();
+                return new StringBuilder().append(usageState.getLastConnectTime()).append(' ').append(usageState.getUserId()).toString();
             }
         };
     }
