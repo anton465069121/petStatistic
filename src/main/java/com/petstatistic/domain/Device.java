@@ -10,7 +10,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooJpaEntity
-@RooJpaActiveRecord
+@RooJpaActiveRecord(finders={"findDevicesByMac","findDevicesByImei"})
 public class Device {
 	private String mac;
 	private String imei;
