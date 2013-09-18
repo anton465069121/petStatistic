@@ -6,7 +6,7 @@
         <table:table data="${historylogs}" id="l_com_petstatistic_domain_HistoryLog" path="/historylogs" z="xXZG103hGR6AVs1g9DutbMfV2gY=">
             <table:column id="c_com_petstatistic_domain_HistoryLog_userId" property="userId" z="vy5AJgaRh5HO4wNMJ5Qq0ZmaeIs="/>
             <table:column id="c_com_petstatistic_domain_HistoryLog_connectTimes" property="connectTimes" z="KfTMVqywfW24+3l5gwt+p/VfRKg="/>
-            <table:column id="c_com_petstatistic_domain_HistoryLog_historyDate" property="historyDate" z="FquC9veE9uVYpQUACgDQqIyrZfI="/>
+            <table:column date="true" dateTimePattern="${historyLog_historydate_date_format}" id="c_com_petstatistic_domain_HistoryLog_historyDate" property="historyDate" z="lMZj3XFCWCVJ/CXmCg7Y1RvKmO0="/>
         </table:table>
     </page:list>
 </div>

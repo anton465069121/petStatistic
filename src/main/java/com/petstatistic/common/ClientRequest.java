@@ -1,9 +1,8 @@
-package com.petstatistic.service;
-
+package com.petstatistic.common;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class ClientRequest extends PetRequest{
+public class ClientRequest extends PetComRequest{
 	String token;
 	String method;
 	String mac;

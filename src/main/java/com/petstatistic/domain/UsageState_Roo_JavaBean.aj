@@ -4,7 +4,7 @@
 package com.petstatistic.domain;
 
 import com.petstatistic.domain.UsageState;
-import java.sql.Date;
+import java.util.Date;
 
 privileged aspect UsageState_Roo_JavaBean {
     

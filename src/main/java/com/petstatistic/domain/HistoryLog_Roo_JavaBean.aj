@@ -4,7 +4,7 @@
 package com.petstatistic.domain;
 
 import com.petstatistic.domain.HistoryLog;
-import java.sql.Date;
+import java.util.Date;
 
 privileged aspect HistoryLog_Roo_JavaBean {
     

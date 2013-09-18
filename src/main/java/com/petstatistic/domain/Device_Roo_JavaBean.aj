@@ -4,7 +4,7 @@
 package com.petstatistic.domain;
 
 import com.petstatistic.domain.Device;
-import java.sql.Date;
+import java.util.Date;
 
 privileged aspect Device_Roo_JavaBean {
     

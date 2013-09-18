@@ -4,6 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_petstatistic_domain_UsageState" modelAttribute="usageState" path="/usagestates" versionField="Version" z="jkXXtRUPECsMWt1N+RIQ52ruaCk=">
         <field:input field="userId" id="c_com_petstatistic_domain_UsageState_userId" z="4EMsdtGreoDcJwsfeqURQa2A+mY="/>
-        <field:input field="lastConnectTime" id="c_com_petstatistic_domain_UsageState_lastConnectTime" z="pkutKcT94U83lvPVEkldo5B2sQQ="/>
+        <field:datetime dateTimePattern="${usageState_lastconnecttime_date_format}" field="lastConnectTime" id="c_com_petstatistic_domain_UsageState_lastConnectTime" z="UF0MCdDfwVbghK4vIBKLzwj6KJI="/>
     </form:update>
 </div>

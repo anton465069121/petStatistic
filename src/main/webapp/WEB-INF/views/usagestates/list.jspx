@@ -5,7 +5,7 @@
     <page:list id="pl_com_petstatistic_domain_UsageState" items="${usagestates}" z="TLZe2k84JzYpkLKAX7A1PNIS1Ag=">
         <table:table data="${usagestates}" id="l_com_petstatistic_domain_UsageState" path="/usagestates" z="LkTYV7FhnwUvXQGGDWFMsFeFyaA=">
             <table:column id="c_com_petstatistic_domain_UsageState_userId" property="userId" z="JcvN/imF8QDzvEfQaQY5rTAvq4M="/>
-            <table:column id="c_com_petstatistic_domain_UsageState_lastConnectTime" property="lastConnectTime" z="e6qugEh7MeYEe25Eku9FJMZOtcw="/>
+            <table:column date="true" dateTimePattern="${usageState_lastconnecttime_date_format}" id="c_com_petstatistic_domain_UsageState_lastConnectTime" property="lastConnectTime" z="buOg5kw36pDHc26levzaYOVfnis="/>
         </table:table>
     </page:list>
 </div>
