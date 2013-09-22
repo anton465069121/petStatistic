@@ -8,27 +8,35 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/beans
 		  http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<amq:connectionFactory id="jmsConnectionFactory"
-		brokerURL="${jms.brokerURL}" />
-
-	<bean id="pooledConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
-		<property name="maxConnections" value="8" />
-		<property name="maximumActive" value="500" />
-		<property name="connectionFactory" ref="jmsConnectionFactory" />
+	<amq:connectionFactory id="jmsFactory" brokerURL="${jms.brokerURL}" />
+	<!--  ActiveMQ destinations  -->  
+	<!--  使用topic方式-->  
+	<amq:topic name="TOPIC" physicalName="apprequest-TOPIC" />  
+	<!--  使用Queue方式-->  
+	<amq:queue name="QUEUE" physicalName="apprequest-QUEUE" />
+	
+	<bean id="connectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
+		<property name="connectionFactory" ref="jmsFactory" />
 	</bean>
-
-
-	<camel:camelContext id="camelContext" >
-	</camel:camelContext>
-	<bean id="jmsCfg" class="org.apache.activemq.camel.component.ActiveMQConfiguration">
-                <property name="connectionFactory" ref="pooledConnectionFactory"></property>
-                <property name="cacheLevelName" value="CACHE_CONSUMER"/>
+	
+ 	<bean id="listenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">  
+        <property name="connectionFactory" ref="connectionFactory"></property>  
+        <property name="destination" ref="TOPIC"></property>  
+        <property name="messageListener" ref="petStatisticService"></property>  
     </bean>
-	<bean id="jms" class="org.apache.camel.component.jms.JmsComponent">
-		<constructor-arg type="org.apache.camel.component.jms.JmsConfiguration" ref="jmsCfg"></constructor-arg>
-		<property name="connectionFactory" ref="pooledConnectionFactory"></property>
-		<property name="transacted" value="true"></property>
-		<property name="lazyCreateTransactionManager" value="false"></property>
-	</bean>
+    
+    
+<!-- 	<camel:camelContext id="camelContext" > -->
+<!-- 	</camel:camelContext> -->
+<!-- 	<bean id="jmsCfg" class="org.apache.activemq.camel.component.ActiveMQConfiguration"> -->
+<!--                 <property name="connectionFactory" ref="pooledConnectionFactory"></property> -->
+<!--                 <property name="cacheLevelName" value="CACHE_CONSUMER"/> -->
+<!--     </bean> -->
+<!-- 	<bean id="jms" class="org.apache.camel.component.jms.JmsComponent"> -->
+<!-- 		<constructor-arg type="org.apache.camel.component.jms.JmsConfiguration" ref="jmsCfg"></constructor-arg> -->
+<!-- 		<property name="connectionFactory" ref="pooledConnectionFactory"></property> -->
+<!-- 		<property name="transacted" value="true"></property> -->
+<!-- 		<property name="lazyCreateTransactionManager" value="false"></property> -->
+<!-- 	</bean> -->
 
 </beans>

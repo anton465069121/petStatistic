@@ -4,19 +4,16 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.jms.TextMessage;
 
-import org.apache.camel.Body;
-import org.apache.camel.CamelContext;
-import org.apache.camel.Header;
-import org.apache.camel.builder.RouteBuilder;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.JsonProcessingException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -29,33 +26,28 @@ import com.petstatistic.domain.PetUser;
 import com.petstatistic.domain.UsageState;
 
 @Service
-public class PetStatisticService {
-	private Logger logger=LoggerFactory.getLogger(this.getClass());
-	@Autowired
-	private CamelContext camelContext;
+public class PetStatisticService implements MessageListener{
 	
-	@PostConstruct
-	public void init() {
-		try {
-				logger.info("start app camel routes");
-				camelContext.addRoutes(new RouteBuilder() {
-					@Override
-					public void configure() throws Exception {
-						from("jms:queue:VirtualTopicConsumers.statistic.apprequest?concurrentConsumers=1").to("bean:petStatisticService?method=petStatisticHandle").routeId("客户端请求统计");
-					}
-				});
-		} catch (Exception e) {
-			logger.error("camel context start fail",e);
+	private Logger logger=LoggerFactory.getLogger(this.getClass());
+	
+	@Override
+	public void onMessage(Message message) {
+        try {
+        	TextMessage msg = (TextMessage) message;
+        	petStatisticHandle(msg.getStringProperty("body"),msg.getStringProperty("ret"));
+           }catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
 	/**
-	 * 查询并添加新device
+	 * 
+	 * 根据消息参数调用对应的处理方法
 	 * @param request
 	 * @param ret
 	 * @throws Exception
 	 */
-	public void petStatisticHandle(@Body()String request,@Header("ret")String ret) throws Exception{
+	public void petStatisticHandle(String request,String ret) throws Exception{
 		if(!StringUtils.hasLength(ret)){
 			return;
 		}
@@ -306,4 +298,23 @@ public class PetStatisticService {
 			}
 		}
 	}
+
+	
+//	@Autowired
+//	private CamelContext camelContext;
+	
+//	@PostConstruct
+//	public void init() {
+//		try {
+//				logger.info("start app camel routes");
+//				camelContext.addRoutes(new RouteBuilder() {
+//					@Override
+//					public void configure() throws Exception {
+//						from("jms:queue:VirtualTopicConsumers.statistic.apprequest?concurrentConsumers=1").to("bean:petStatisticService?method=petStatisticHandle").routeId("客户端请求统计");
+//					}
+//				});
+//		} catch (Exception e) {
+//			logger.error("camel context start fail",e);
+//		}
+//	}
 }

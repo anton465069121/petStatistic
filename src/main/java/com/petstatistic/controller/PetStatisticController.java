@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.petstatistic.service.OverViewService;
+import com.petstatistic.service.PetStatisticService;
 import com.petstatistic.vo.OverView;
 
 @RequestMapping("/statistic")
@@ -20,6 +21,8 @@ import com.petstatistic.vo.OverView;
 public class PetStatisticController {
 	@Autowired
 	OverViewService overViewService;
+	@Autowired
+	PetStatisticService petStatisticService;
 	
     @RequestMapping(method = RequestMethod.POST, value = "{id}")
     public void post(@PathVariable Long id, ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) {
